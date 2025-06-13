@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ব্রাদারস ল্যান্ড ডেভেলপমেন্ট</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <link href="./assets/css/output.css" rel="stylesheet">
   <style>
     .swiper {
       width: 100%;
@@ -15,9 +18,7 @@
       background-size: cover;
       background-position: center;
     }
-    a.custom-btn {
-        width: 247px;
-    }
+ 
   </style>
 </head>
 <body class="bg-white text-gray-800 relative">
@@ -28,20 +29,23 @@
   </a>
 
   <!-- hader area -->
-  <div class="max-w-7xl mx-auto bg-amber-100 bg-black flex justify-between items-center">
-    <div class="logo">
-      <h2 class="text-5xl text-white font-bold">ডেভেলপার</h2>
+  <div class=" bg-amber-100  ">
+    <div class="max-w-7xl mx-auto px-4 text-center md:flex md:justify-between items-center py-5">
+      <div class="logo mb-3 md:mb-0">
+        <h2 class="text-3xl font-bold">বারইজ্জা হাউজিং</h2>
+      </div>
+      <div class="cta-btn">
+        <a class="text-lg font-bold px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded" href="#">ভিজিট বুক করুন </a>
+      </div>
     </div>
-    <div class="cta-btn">
-      <a class="text-lg font-bold px-4 py-2 bg-[#f59e0d] text-white rounded" href="#">মিটিং বুক করুন </a>
-    </div>
+    
   </div>
   <!-- Hero Slider Section -->
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide " style="background-image: url('./assets/img/land-1.jpg');">
-        <div class="h-full w-full bg-black bg-opacity-60 flex items-center justify-center">
-          <div class="text-center text-white px-4 flex-col gap-4 items-center">
+        <div class="h-full w-full bg-black/60 flex items-center justify-center">
+          <div class="text-center text-white px-4 ">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">বারইজ্জার হাটে আপনার স্বপ্নের প্লট!</h1>
             <p class="text-2xl md:text-xl mb-6">কোলাহল মুক্ত মনোরম পরিবেশ</p>
             <a href="tel:01715309950" class="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold shadow">কল করুন: ০১৭১৫৩০৯৯৫০</a>
@@ -49,17 +53,17 @@
         </div>
       </div>
       <div class="swiper-slide  " style="background-image: url('./assets/img/land-hero-2.jpg');">
-        <div class="h-full w-full bg-black bg-opacity-60 flex items-center justify-center">
-          <div class="text-center text-white px-4 flex flex-col gap-4 items-center ">
+        <div class="h-full w-full bg-black/60 flex items-center justify-center">
+          <div class="text-center text-white px-4  ">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">আপনার সন্তানের নিরাপদ আবাসন</h1>
             <p class="text-lg md:text-xl mb-6"> সহজ রেজিস্ট্রেশোন ও নামজারি</p>
-            <a href="tel:01715309950" class="custom-btn bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold shadow block  ">কল করুন: ০১৭১৫৩০৯৯৫০</a>
+            <a href="tel:01715309950" class="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold shadow">কল করুন: ০১৭১৫৩০৯৯৫০</a>
           </div>
         </div>
       </div>
       <div class="swiper-slide " style="background-image: url('./assets/img/land-hero-3.jpg');">
-        <div class="h-full w-full bg-black bg-opacity-60 flex items-center justify-center">
-          <div class="text-center text-white px-4 flex-col gap-4 items-center">
+        <div class="h-full w-full bg-black/60 flex items-center justify-center">
+          <div class="text-center text-white px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-4 ">১০০% নিরাপদ  ও লাভজনক বিনিয়োগ  </h1>
             <p class="text-lg md:text-xl mb-6">১০০% বৈধ ও সঠিক কাগজপত্র </p>
             <a href="tel:01715309950" class="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold shadow">বুক করুন এখনই</a>
@@ -74,7 +78,7 @@
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-10">কেন আমাদের কাছ থেকে জমি কিনবেন?</h2>
-      <div class="grid md:grid-cols-4 gap-6 text-left">
+      <div class="grid md:grid-cols-3 gap-6 text-left">
         <div class="bg-gray-100 p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">১০০% বৈধ ও সঠিক কাগজপত্র</h3>
           <p>নামজারি-খতিয়ান ও দলিল সম্পূর্ণ আপডেটেড।</p>
@@ -90,6 +94,14 @@
         <div class="bg-gray-100 p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2"> সুদ মুক্ত সহজ কিস্তি সুবিধা</h3>
           <p>২৪ মাসের সহজ কিস্তি সুবিধা উপভোগ করুন</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">হাউজিং এর ভিতরে প্রশস্ত রাস্তা </h3>
+          <p>চলাচলের জন্য রয়েছে প্রশস্ত রাস্তা</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold mb-2">বিদ্যুৎ, পানি ও পয়ঃ নিষ্কাশন ব্যাবস্থা</h3>
+          <p>সম্পূর্ণ রেডি অবস্থায় পাবেন আমাদের প্লট</p>
         </div>
       </div>
     </div>
@@ -112,7 +124,7 @@
 
 
     <!-- Plot Category Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-yellow-100">
         <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-6">প্লট ক্যাটেগরি</h2>
         <div class="grid md:grid-cols-3 gap-6 text-left">
@@ -129,6 +141,7 @@
             <p>জমির পরিমাণ: ১০ শতক</p>
             </div>
         </div>
+        <p class="mt-4 font-bold text-xl">আপনার প্রয়োজন মত যে কোন সাইজের প্লট নিতে পারবেন । </p>
         </div>
     </section>
 
@@ -148,7 +161,7 @@
 
 
   <!-- FAQ Section -->
-  <section class="py-10 bg-gray-50">
+  <!-- <section class="py-10 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-2xl font-bold mb-6 text-center">প্রশ্নোত্তর (FAQ)</h2>
       <div class="space-y-4">
@@ -170,7 +183,24 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+    <!-- FAQ Section -->
+    <section class="py-10 bg-gray-50">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">❓ প্রায় জিজ্ঞাসিত প্রশ্নাবলী</h2>
+        <div class="space-y-4">
+          <details class="bg-white shadow rounded p-4">
+            <summary class="cursor-pointer font-semibold">জমি কি রেজিস্ট্রি করা যাবে?</summary>
+            <p class="mt-2 text-gray-700">হ্যাঁ, সম্পূর্ণ কাগজপত্র সহ জমি রেজিস্ট্রি করা যাবে।</p>
+          </details>
+          <details class="bg-white shadow rounded p-4">
+            <summary class="cursor-pointer font-semibold">কিস্তি সুবিধা আছে কি?</summary>
+            <p class="mt-2 text-gray-700">হ্যাঁ, আপনি সহজ কিস্তিতে প্লট বুক করতে পারবেন।</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
   <!-- Google Map Section -->
   <section class="py-10 bg-white">
@@ -190,17 +220,67 @@
     </div>
   </section>
 
+    <!-- Testimonial Section -->
+    <section class="py-10 bg-white mt-32">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">🗣️ ক্রেতাদের মতামত</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-100 p-6 rounded-xl shadow text-left">
+            <img src="https://i.pravatar.cc/100?img=1" class="w-12 h-12 rounded-full mb-2" alt="User">
+            <p class="text-gray-700 italic">“খুব সুন্দর লোকেশন এবং পেমেন্ট প্রসেস সহজ। আমি খুশি।”</p>
+            <div class="text-yellow-400 mt-2">★★★★★</div>
+            <p class="text-sm font-semibold mt-1">মোঃ আলম</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-xl shadow text-left">
+            <img src="https://i.pravatar.cc/100?img=2" class="w-12 h-12 rounded-full mb-2" alt="User">
+            <p class="text-gray-700 italic">“সার্ভিস খুব ভালো এবং প্লট সাইজ ঠিক যেমনটা চেয়েছিলাম।”</p>
+            <div class="text-yellow-400 mt-2">★★★★☆</div>
+            <p class="text-sm font-semibold mt-1">শাহিন আক্তার</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-xl shadow text-left">
+            <img src="https://i.pravatar.cc/100?img=3" class="w-12 h-12 rounded-full mb-2" alt="User">
+            <p class="text-gray-700 italic">“অনেক নির্ভরযোগ্য এবং দ্রুত সাপোর্ট পাই।”</p>
+            <div class="text-yellow-400 mt-2">★★★★★</div>
+            <p class="text-sm font-semibold mt-1">রুবেল হোসেন</p>
+          </div>
+        </div>
+      </div>
+    </section>  
+
   <!-- Booking Form Section with WhatsApp submit -->
-  <section class="py-10 bg-gray-50">
-    <div class="max-w-xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-4 text-center">ফর্ম পূরণ করে বুকিং দিন</h2>
-      <form class="space-y-4" onsubmit="return sendWhatsAppMessage(event)">
+  <section class="py-10 bg-gray-50 my-10">
+    <div class="max-w-5xl mx-auto px-4 flex gap-20 justify-between">
+      <div class="">
+        <h2 class="text-2xl font-bold mb-4 text-center">ফর্ম পূরণ করে বুকিং দিন</h2>
+        <form class="space-y-4" onsubmit="return sendWhatsAppMessage(event)">
         <input type="text" id="name" placeholder="আপনার নাম" class="w-full p-3 rounded border border-gray-300" required>
         <input type="tel" id="phone" placeholder="মোবাইল নম্বর" class="w-full p-3 rounded border border-gray-300" required>
         <textarea id="message" rows="4" placeholder="আপনার বার্তা" class="w-full p-3 rounded border border-gray-300"></textarea>
         <button type="submit" class="w-full bg-yellow-500 text-white py-3 px-6 rounded-lg font-semibold shadow hover:bg-yellow-600">WhatsApp-এ পাঠান</button>
-      </form>
+        </form>
+      </div>
+      <div class="w-full">
+        <h2 class="text-center text-2xl font-bold mb-8">আমাদের ঠিকানা</h2>
+        <div class="text-xl text-gray-500">
+          <div class="head-office mb-6">
+            <h3 class="font-bold text-black">হেড অফিস</h3>
+            <p>অফিসঃ হলিডে টুরস এন্ড ট্রাভেলস</p>
+            <p> ফোনঃ ০১৭২০৩৫৩৩</p>
+            <p>সদর রোড, বরিশাল</p>
+            <p>ইমেইল এড্রেসঃ holiday@gmail.com</p>
+          </div>
+          <div class="project-office">
+            <h3 class="font-bold text-black">প্রজেক্ট অফিস</h3>
+            <p>অফিসঃ হলিডে টুরস এন্ড ট্রাভেলস</p>
+            <p> ফোনঃ ০১৭২০-৫৪৩৫৩১</p>
+            <p>বারইজ্জার হাট, বরিশাল</p>
+            <p>ইমেইল এড্রেসঃ holiday@gmail.com</p>
+          </div>
+         
+        </div>
+      </div>
     </div>
+    
   </section>
 
     <!-- Installment Calculator Section -->
@@ -251,6 +331,7 @@
   </script>
     <!-- slider js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
   <script>
     const swiper = new Swiper('.swiper', {
       loop: true,
@@ -274,6 +355,12 @@
       return false;
     }
   </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+   <script>
+     const lightbox = GLightbox({ selector: '.glightbox' });
+   </script>
+ 
 
 </body>
 </html>
