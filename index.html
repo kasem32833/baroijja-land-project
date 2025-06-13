@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ব্রাদারস ল্যান্ড ডেভেলপমেন্ট</title>
  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
-  <link href="./assets/css/output.css" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="./assets/css/lightbox-2.min.css">
+<link href="./assets/css/output.css" rel="stylesheet">
   <style>
     .swiper {
       width: 100%;
@@ -32,7 +31,7 @@
   <div class=" bg-amber-100  ">
     <div class="max-w-7xl mx-auto px-4 text-center md:flex md:justify-between items-center py-5">
       <div class="logo mb-3 md:mb-0">
-        <h2 class="text-3xl font-bold">বারইজ্জা হাউজিং</h2>
+        <h2 class="text-3xl font-bold">বারইজ্জা <span>হাউজিং</span></h2>
       </div>
       <div class="cta-btn">
         <a class="text-lg font-bold px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded" href="#">ভিজিট বুক করুন </a>
@@ -108,7 +107,7 @@
   </section>
 
     <!-- Photo Gallery Section -->
-    <section class="py-10 bg-white">
+    <!-- <section class="py-10 bg-white">
         <div class="max-w-6xl mx-auto px-4 text-center">
         <h2 class="text-2xl font-bold mb-6">ছবি গ্যালারি</h2>
         <div class="grid md:grid-cols-3 gap-4">
@@ -120,7 +119,24 @@
             <img src="./assets/img/land-hero-3.jpg" class="w-full h-64 object-cover rounded-lg shadow">
         </div>
         </div>
-    </section>
+    </section> -->
+
+      <!-- Gallery Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-6">📸 আমাদের প্রকল্পের কিছু ছবি</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="./assets/img/land-hero-1.webp" data-lightbox="roadtrip"><img src="./assets/img/land-hero-1.webp" class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-2.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-2.jpg"   class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-3.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-3.jpg"   class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-4.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-4.jpg"   class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-1.webp" data-lightbox="roadtrip"><img src="./assets/img/land-hero-1.webp" class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-2.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-2.jpg"   class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-3.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-3.jpg"   class=" w-full rounded shadow h-40"></a>
+        <a href="./assets/img/land-hero-4.jpg" data-lightbox="roadtrip"><img src="./assets/img/land-hero-4.jpg"   class=" w-full rounded shadow h-40"></a>
+      </div>
+    </div>
+  </section>
 
 
     <!-- Plot Category Section -->
@@ -249,7 +265,7 @@
 
   <!-- Booking Form Section with WhatsApp submit -->
   <section class="py-10 bg-gray-50 my-10">
-    <div class="max-w-5xl mx-auto px-4 flex gap-20 justify-between">
+    <div class="max-w-5xl mx-auto px-4  gap-20  md:flex md:justify-between">
       <div class="">
         <h2 class="text-2xl font-bold mb-4 text-center">ফর্ম পূরণ করে বুকিং দিন</h2>
         <form class="space-y-4" onsubmit="return sendWhatsAppMessage(event)">
@@ -313,54 +329,18 @@
     <!-- Messenger Chat Plugin -->
   <div id="fb-root"></div>
   <div id="fb-customer-chat" class="fb-customerchat"></div>
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "YOUR_PAGE_ID");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({ xfbml: true, version: 'v17.0' });
-    };
-    (function(d, s, id) {
-      if (d.getElementById(id)) return;
-      var js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      d.getElementsByTagName('head')[0].appendChild(js);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-    <!-- slider js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      autoplay: {
-        delay: 5000,
-      },
-    });
 
-    
-    function sendWhatsAppMessage(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
-      const text = `নাম: ${name}\nফোন: ${phone}\nবার্তা: ${message}`;
-      const url = `https://wa.me/8801715309950?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
-      return false;
-    }
-  </script>
+  <!-- javascript -->
 
-   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-   <script>
-     const lightbox = GLightbox({ selector: '.glightbox' });
-   </script>
- 
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/lightbox-2.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+   
+
+   
 
 </body>
 </html>
